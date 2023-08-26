@@ -37,11 +37,11 @@ const Portfolio = () => {
       <Skills />
       <ProjectsContainer />
       <ContactMe />
-      {/* <motion.div
+      <motion.div
         className="cursor"
         style={{ x: mousePosition.x - 50, y: mousePosition.y - 90 }}
         transition={{ ease: "easeInOut", duration: 0.2, delay: 0.5 }}
-      ></motion.div> */}
+      ></motion.div>
     </motion.div>
   );
 };
