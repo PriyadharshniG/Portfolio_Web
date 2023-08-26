@@ -1,7 +1,11 @@
-import { RoughNotation } from "react-rough-notation";
+import { motion } from "framer-motion";
 const Skills = () => {
   return (
-    <div className="w-full flex font-poppins flex-col justify-items-start">
+    <motion.div className="w-full flex font-poppins flex-col justify-items-start"
+      initial={{x:-40}}
+      animate={{x: 0}}
+      transition={{duration: 0.8, type: 'spring'}}
+    >
       <h1 className="heading mx-8 text-darkslateblue font-semibold max-w-fit cursor-default">
         Skills & Tools
       </h1>
@@ -57,7 +61,7 @@ const Skills = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

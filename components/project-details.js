@@ -5,7 +5,7 @@ const ProjectDetails = (props) => {
       <img
         src={props.imageURL}
         alt="Skewed Image"
-        className="rounded-md w-full object-fit md:hidden"
+        className="rounded-md w-full object-fit md:hidden mt-3"
       />
       <div className="md:ml-3 col-span-2 ml-30 md:col-span-3">
         <h1 className="heading max-w-fit">{props.name}</h1>
@@ -15,7 +15,7 @@ const ProjectDetails = (props) => {
             return (
               <button
                 type="button"
-                className="h-10 min-w-min font-poppins text-lg border-2 rounded-md border-darkslateblue bg-white"
+                className="h-9 min-w-min font-poppins text-lg border-2 rounded-xl border-darkslateblue bg-white"
                 key={nanoid()}
               >
                 {x}

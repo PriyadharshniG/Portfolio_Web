@@ -2,14 +2,14 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 const PersonalDetails = () => {
   return (
     <div className="font-poppins grid grid-cols-3 gap-1 w-full md:grid-cols-1 text-l">
-      <RoughNotationGroup show={true}>
+      <RoughNotationGroup show={true} animationDelay={3400}>
         <div className="ml-40 col-span-2 md:mx-8">
           <h1 className="text-2xl">
             Hi! I’m Vikas, a{" "}
             <RoughNotation
               type="highlight"
               color="#E7CEFF"
-              animationDuration={700}
+              animationDuration={1000}
             >
               developer
             </RoughNotation>{" "}
