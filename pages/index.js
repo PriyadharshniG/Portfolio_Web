@@ -3,15 +3,40 @@ import PersonalDetails from "../components/personal-details";
 import Skills from "../components/skills";
 import ProjectsContainer from "../components/projects-container";
 import ContactMe from "../components/contact-me";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0
+  });
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY
+      });
+    };
+    window.addEventListener("mousemove", mouseMove);
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
   return (
-    <div className="relative bg-whitesmoke w-full overflow-y-auto flex flex-col items-center justify-start gap-[12px]">
+    <div className="relative bg-white w-full flex flex-col items-center justify-start gap-[12px]">
       <Header />
       <PersonalDetails />
       <Skills />
       <ProjectsContainer />
       <ContactMe />
+      <motion.div
+        className="cursor"
+        style={{ x: mousePosition.x - 50, y: mousePosition.y - 90 }}
+        transition={{ ease: "easeInOut", duration: 0.2, delay: 0.5 }}
+      ></motion.div>
     </div>
   );
 };

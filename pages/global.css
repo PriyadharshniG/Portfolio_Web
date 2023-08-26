@@ -10,3 +10,51 @@ body {
 ::after {
   border-width: 0;
 }
+@layer utilities{
+  .nav{
+    @apply  font-medium text-xl no-underline text-darkslateblue relative
+  }
+  .nav::after{
+    @apply content-[""] bg-darkslateblue h-[3px] w-[0%] absolute -bottom-[4px] rounded-xl left-0 duration-200
+  }
+  .nav:hover::after{
+    @apply w-[100%]
+  }
+  .heading{
+    @apply  font-medium no-underline text-darkslateblue relative
+  }
+  .heading::after{
+    @apply content-[""] bg-darkslateblue h-[3px] w-[0%] absolute -bottom-[4px] rounded-xl left-0 duration-200
+  }
+  .heading:hover::after{
+    @apply w-[100%]
+  }
+}
+.cursor {
+  background-color: #61abf5;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  filter: blur(115px)
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track background */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: #0955A3;
+  border-radius: 10px;
+}
+html {
+  scroll-behavior: smooth;
+}

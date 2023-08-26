@@ -1,104 +1,60 @@
+import { RoughNotation } from "react-rough-notation";
 const Skills = () => {
   return (
-    <div className="self-stretch overflow-hidden shrink-0 flex flex-col py-9 px-[38px] items-start justify-start gap-[13px] text-left text-17xl text-darkslateblue font-poppins">
-      <div className="relative font-semibold">{`Skills & Tools`}</div>
-      <div className="relative text-5xl font-medium text-dimgray">
-        The Tools and Technologies that i use to bring products to life.
-      </div>
-      <div className="w-[747px] flex flex-row flex-wrap py-[26px] px-0 box-border items-center justify-center gap-[40px] text-center text-base text-black">
-        <div className="flex-1 h-[95px] flex flex-col items-center justify-start text-xl">
-          <img
-            className="relative w-[65px] h-[65px] overflow-hidden shrink-0"
-            alt=""
-            src="/icons8html-1.svg"
-          />
-          <div className="self-stretch flex-1 relative">HTML</div>
+    <div className="w-full flex font-poppins flex-col justify-items-start">
+      <h1 className="heading mx-8 text-darkslateblue font-semibold max-w-fit cursor-default">
+        Skills & Tools
+      </h1>
+      <h1 className="text-dimgray text-lg mx-8 max-w-fit font-medium">
+        The Tools and Technologies that i use to bring&nbsp; products to life.
+      </h1>
+
+      <div className="grid grid-cols-5 grid-rows-2 md:grid-cols-3 w-3/5 md:w-full md:-ml-1 ml-8 justify-items-center">
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8html-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal">HTML</p>
         </div>
-        <div className="flex-1 flex flex-col items-start justify-start text-xl">
-          <img
-            className="relative w-[62px] h-[62px] overflow-hidden shrink-0"
-            alt=""
-            src="/icons8css-1.svg"
-          />
-          <div className="self-stretch relative">CSS</div>
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8css-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal">CSS</p>
         </div>
-        <div className="flex-1 h-[83px] flex flex-col items-center justify-start text-mini">
-          <img
-            className="relative w-[52px] h-[52px] overflow-hidden shrink-0"
-            alt=""
-            src="/icons8javascript-1.svg"
-          />
-          <div className="relative">JavaScript</div>
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8javascript-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal">JavaScript</p>
         </div>
-        <div className="flex-1 h-[74px] flex flex-col items-end justify-start text-mini">
-          <img
-            className="relative w-14 h-14 overflow-hidden shrink-0"
-            alt=""
-            src="/icons8react-1.svg"
-          />
-          <div className="self-stretch flex-1 relative">React</div>
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8react-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal">React.JS</p>
         </div>
-        <div className="flex-1 h-[77px] flex flex-col items-center justify-start text-mini">
-          <img
-            className="relative w-[58px] h-[58px] overflow-hidden shrink-0"
-            alt=""
-            src="/icons8nextjs-1.svg"
-          />
-          <div className="relative">NextJS</div>
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8nextjs-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal">Next.JS</p>
         </div>
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <img
-            className="relative w-[51px] h-[51px] overflow-hidden shrink-0"
-            alt=""
-            src="/icons8git-1.svg"
-          />
-          <div className="relative">Git</div>
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8git-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal">Git</p>
         </div>
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <img
-            className="relative w-[50px] h-[50px] overflow-hidden shrink-0"
-            alt=""
-            src="/icons8github-1.svg"
-          />
-          <div className="relative">Github</div>
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8github-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal">Github</p>
         </div>
-        <div className="flex-1 h-[79px] flex flex-col items-center justify-start">
+        <div className="flex flex-col justify-center items-center max-w-fit">
           <img
-            className="relative w-[26.63px] h-[35px]"
-            alt=""
-            src="/group-1.svg"
-          />
-          <div className="relative inline-block w-[62px] h-[60px] shrink-0">
-            <p className="m-0">Sanity</p>
-            <p className="m-0">CMS</p>
-          </div>
-        </div>
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <img
-            className="relative w-[51px] h-[51px] overflow-hidden shrink-0"
-            alt=""
             src="/icons8visualstudio-1.svg"
-          />
-          <div className="relative">
-            <p className="m-0">Visual Studio</p>
-            <p className="m-0">Code</p>
-          </div>
-        </div>
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <img
-            className="relative w-[55px] h-[55px] overflow-hidden shrink-0"
             alt=""
-            src="/icons8sass-1.svg"
+            className="w-20 md:w-14"
           />
-          <div className="relative">SASS</div>
+          <p className="font-poppins text-lg font-normal">VS Code</p>
         </div>
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <img
-            className="relative w-12 h-12 overflow-hidden shrink-0"
-            alt=""
-            src="/icons8tailwindcss-1.svg"
-          />
-          <div className="relative">Tailwind</div>
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8sass-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal">SASS</p>
+        </div>
+        <div className="flex flex-col justify-center items-center max-w-fit">
+          <img src="/icons8tailwindcss-1.svg" alt="" className="w-20 md:w-14" />
+          <p className="font-poppins text-lg font-normal text-center">
+            Tailwind <br /> CSS
+          </p>
         </div>
       </div>
     </div>
