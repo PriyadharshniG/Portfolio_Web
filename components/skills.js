@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <motion.div className="w-full flex font-poppins flex-col justify-items-start"
-      initial={{x:-40}}
+      initial={{x:-100}}
       animate={{x: 0}}
-      transition={{duration: 0.8, type: 'spring'}}
+      transition={{duration: 1, bounce: 0.18, type: 'spring'}}
     >
       <h1 className="heading mx-8 text-darkslateblue font-semibold max-w-fit cursor-default">
         Skills & Tools
