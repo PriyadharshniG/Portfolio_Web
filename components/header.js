@@ -17,7 +17,7 @@ const Header = () => {
         }}
       >
         <h1 className="heading text-2xl font-poppins text-darkslateblue font-medium mx-5 cursor-default">
-          VIKAS CHAUHAN
+          {"{ VIKAS }"}
         </h1>
         <div className="flex justify-center items-center gap-10 mx-5 font-poppins text-darkslateblue font-normal md:hidden">
           <a href="#projects" className="nav">
