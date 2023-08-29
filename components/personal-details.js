@@ -4,7 +4,7 @@ const PersonalDetails = () => {
     <div className="font-poppins grid grid-cols-3 gap-1 w-full md:grid-cols-1 text-l">
       <RoughNotationGroup show={true} >
         <div className="ml-40 col-span-2 md:mx-8">
-          <h1 className="text-2xl">
+          <h1 className="text-2xl leading-8">
             Hi! I’m Vikas, a{" "}
             <RoughNotation
               type="highlight"
@@ -14,9 +14,9 @@ const PersonalDetails = () => {
             >
               developer
             </RoughNotation>{" "}
-            based in <br /> New Delhi.
+            based in <br className="md:hidden"/> New Delhi.
           </h1>
-          <h3 className="text-dimgray font-normal text-lg">
+          <h3 className="text-dimgray font-normal text-lg leading-9">
             I enjoy creating{" "}
             <RoughNotation
               type="highlight"
@@ -35,7 +35,7 @@ const PersonalDetails = () => {
               pleasant websites.
             </RoughNotation>
           </h3>
-          <h3 className="text-dimgray font-normal text-lg">
+          <h3 className="text-dimgray font-normal text-lg leading-7">
             {" "}
             I'm a recent graduate specializing in{" "}
             <RoughNotation
@@ -86,7 +86,7 @@ const PersonalDetails = () => {
               </RoughNotation>
             </strong>
           </h3>
-          <div className="my-8 flex gap-6 flex-wrap">
+          <div className="my-5 flex gap-6 flex-wrap">
             <button
               type="button"
               className="py-[11px] px-[37px] font-poppins text-lg bg-darkslateblue text-white rounded-md cursor-pointer top-0 right-0 hover:-top-1 hover:-right-1 transition-all relative ease-in-out"
