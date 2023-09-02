@@ -26,13 +26,6 @@ const Header = () => {
           <a href="#contact" className="nav">
             Contact
           </a>
-          <a
-            href="https://drive.google.com/file/d/1UcrpCaZagYpq3QJrMmkUOlt_rjZL-BoV/view?usp=sharing"
-            className="nav"
-            target="_blank"
-          >
-            Resume
-          </a>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
