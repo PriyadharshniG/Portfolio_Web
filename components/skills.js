@@ -26,7 +26,7 @@ const Skills = () => {
       <motion.div
         variants={parentVariants}
         initial="hidden"
-        whileInView="visible"
+        animate="visible"
         className="grid grid-cols-5 grid-rows-2 md:grid-cols-3 w-3/5 md:w-full md:-ml-1 ml-8 justify-items-center"
       >
         <motion.div
