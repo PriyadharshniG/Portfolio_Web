@@ -38,7 +38,7 @@ const Portfolio = () => {
       <ProjectsContainer />
       <ContactMe />
       <motion.div
-        className="cursor"
+        className="cursor md:hidden"
         style={{ x: mousePosition.x - 50, y: mousePosition.y - 90 }}
         transition={{ ease: "easeInOut", duration: 0.2, delay: 0.5 }}
       ></motion.div>
