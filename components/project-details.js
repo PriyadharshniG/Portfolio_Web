@@ -30,7 +30,7 @@ function ProjectDetails(props) {
             onClick={() => setOpenCard(false)}
           >
             <motion.div
-              className={`bg-white w-4/5 text-2xl z-30 mt-40 rounded-xl pb-5 md:w-5/6 md:mt-20`}
+              className={`bg-white w-4/5 text-2xl z-30 mt-40 rounded-xl pb-5 md:w-5/6 md:mt-10`}
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{
                 scale: 1,
@@ -47,7 +47,7 @@ function ProjectDetails(props) {
                 variants={childVariants}
                 initial="hidden"
                 animate="visible"
-                className="heading max-w-max ml-5 p-0 -mb-3"
+                className="heading max-w-max ml-5 p-0 -mb-3 md:leading-8"
               >
                 {props.name}
               </motion.h1>
@@ -55,12 +55,12 @@ function ProjectDetails(props) {
                 variants={childVariants}
                 initial="hidden"
                 animate="visible"
-                className="w-2/3 ml-5 font-poppins text-dimgray md:w-5/6"
+                className="w-2/3 ml-5 font-poppins text-dimgray md:w-5/6 md:leading-6"
               >
                 {props.description}
               </motion.p>
               <motion.div
-                className="flex flex-row flex-wrap ml-5 mb-5 md:ml-2"
+                className="flex flex-row flex-wrap ml-5  md:ml-2"
                 variants={parentVariants}
                 initial="hidden"
                 animate="visible"
@@ -70,7 +70,7 @@ function ProjectDetails(props) {
                     <motion.div
                       key={x}
                       variants={childVariants}
-                      className="rounded-2xl text-sm font-poppins border-2 border-solid border-darkslateblue mx-2 px-4 my-1"
+                      className="rounded-2xl text-sm font-poppins border-2 border-solid border-darkslateblue mx-1 px-4 my-1"
                     >
                       {x}
                     </motion.div>

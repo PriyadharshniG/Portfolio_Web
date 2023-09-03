@@ -38,29 +38,29 @@ const ContactMe = () => {
   }
 
   return (
-    <motion.div className="w-full flex flex-col" variants={variants} initial='hidden' whileInView='visible' id="contact">
+    <motion.div className="w-full flex flex-col" variants={variants} initial='hidden' animate='visible' id="contact">
       <motion.h1 className="font-poppins ml-8 md:ml-3 heading max-w-fit" id="contact">
         Let's Connect
       </motion.h1>
-      <motion.p className="text-dimgray text-sm ml-8 md:ml-3 -mt-3 font-poppins">
+      <motion.p className="text-dimgray text-sm ml-8 md:ml-3 -mt-3 font-poppins overflow-hidden">
         I would love to hear from you and discuss any potential opportunities or
         collaborations.
       </motion.p>
       <form
         ref={form}
-        className="w-1/2 ml-8 md:ml-3 flex flex-row flex-wrap gap-6 md:w-80"
+        className="w-1/2 ml-8 md:ml-3 flex flex-row flex-wrap gap-6 md:w-[20rem]"
       >
         <input
           name="user_name"
           type="text"
           placeholder="Name"
-          className="border-2 border-solid border-[rgb(161, 175, 194/1)] focus:border-darkslateblue rounded-2xl px-5 py-4 font-poppins text-lg outline-none transition-all"
+          className="border-2 border-solid border-[rgb(161, 175, 194/1)] focus:border-darkslateblue rounded-2xl px-5 py-4 font-poppins text-lg outline-none transition-all md:w-64"
         />
         <input
           name="user_email"
           type="text"
           placeholder="Email"
-          className="border-2 border-solid border-[rgb(161, 175, 194/1)] focus:border-darkslateblue rounded-2xl px-5 py-4 font-poppins text-lg outline-none transition-all"
+          className="border-2 border-solid border-[rgb(161, 175, 194/1)] focus:border-darkslateblue rounded-2xl px-5 py-4 font-poppins text-lg outline-none transition-all md:w-64"
         />
         <textarea
           name="message"
