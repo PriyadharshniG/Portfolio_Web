@@ -1,9 +1,10 @@
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
+import Image from "next/image";
 const PersonalDetails = () => {
   return (
     <div className="font-poppins grid grid-cols-3 gap-1 w-full md:grid-cols-1 text-l">
-      <RoughNotationGroup show={true} >
+      <RoughNotationGroup show={true}>
         <div className="ml-40 col-span-2 md:mx-8">
           <h1 className="text-2xl leading-8 md:leading-10">
             Hi! I’m Vikas, a{" "}
@@ -15,7 +16,7 @@ const PersonalDetails = () => {
             >
               developer
             </RoughNotation>{" "}
-            based in <br className="md:hidden"/> New Delhi.
+            based in <br className="md:hidden" /> New Delhi.
           </h1>
           <h3 className="text-dimgray font-normal text-lg leading-9">
             I enjoy creating{" "}
@@ -71,7 +72,7 @@ const PersonalDetails = () => {
           </h3>
           <br />
           <h3 className="text-dimgray font-normal text-lg">
-            I am currently looking for a new role as a developer,&nbsp;&nbsp;  
+            I am currently looking for a new role as a developer,&nbsp;&nbsp;
             <strong>
               <RoughNotation
                 type="circle"
@@ -89,8 +90,8 @@ const PersonalDetails = () => {
           </h3>
           <div className="my-5 flex gap-6 flex-wrap md:gap-5">
             <motion.button
-              whileHover={{scale: 1.1}}
-              whileTap={{scale: 0.9}}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               type="button"
               className="py-[11px] px-[37px] font-poppins text-lg bg-darkslateblue text-white rounded-md cursor-pointer md:px-[10px]"
               onClick={() =>
@@ -103,8 +104,8 @@ const PersonalDetails = () => {
               View Linkedin
             </motion.button>
             <motion.button
-            whileHover={{scale: 1.1}}
-            whileTap={{scale: 0.9}}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               type="button"
               className=" bg-white py-[9px] px-[40px] font-poppins text-lg border-darkslateblue border-2 rounded-md cursor-pointer md:px-[10px]"
               onClick={() =>
@@ -116,14 +117,25 @@ const PersonalDetails = () => {
           </div>
         </div>
       </RoughNotationGroup>
-      <motion.img
-        src="/myphoto@2x.png"
-        alt="My photo"
-        className="w-3/4 md:hidden my-5 shadow-2xl rounded-md"
-        initial={{x: 100}}
-        animate={{x: 0}}
-        transition={{ duration: 0.4, type: "spring", stiffness: 121, damping: 17 }}
-      />
+      <motion.div
+        initial={{ x: 100 }}
+        animate={{ x: 0 }}
+        transition={{
+          duration: 0.4,
+          type: "spring",
+          stiffness: 121,
+          damping: 17,
+        }}
+      >
+        <Image
+          preload
+          width={476}
+          height={512}
+          src="/myphoto@2x.png"
+          alt="My photo"
+          className="w-3/4 md:hidden my-5 shadow-2xl rounded-md"
+        />
+      </motion.div>
     </div>
   );
 };

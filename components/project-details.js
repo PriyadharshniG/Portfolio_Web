@@ -1,4 +1,4 @@
-import { nanoid } from "nanoid";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
@@ -114,7 +114,6 @@ function ProjectDetails(props) {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => window.open(props.sourceCode, "_blank")}
-
                 >
                   View Source Code{" "}
                   <svg
@@ -158,7 +157,10 @@ function ProjectDetails(props) {
             transition={{ type: "spring" }}
           >
             <div className=" " onClick={() => setOpenCard(true)}>
-              <motion.img
+              <Image
+                width={740}
+                height={192}
+                quality={50}
                 className="w-full h-48 object-cover bg-cover rounded-2xl"
                 src={props.imageURL}
                 alt={props.name}
