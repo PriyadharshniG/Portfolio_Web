@@ -1,39 +1,32 @@
-import ProjectDetails from "./project-details";
 import projectData from "../lib/projectData.js";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
+import { Kanit } from "next/font/google";
+import ProjectCard from "./ProjectCard.jsx";
 
-const variants = {
-  hidden: { x: -100, opacity: 0 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.4, type: "spring", stiffness: 121, damping: 17 },
-  },
-};
+const kanit = Kanit({
+  weight: ["500", "200", "300", "400", "600", "700"],
+  subsets: ["latin"],
+});
 
 const ProjectsContainer = () => {
-  const projectElements = projectData.map((x) => (
-    <ProjectDetails {...x} key={x.id} />
-  ));
+  const projectElements = projectData.map((x, i) => {
+    let reversed = false;
+    i % 2 == 0 ? (reversed = true) : (reversed = false);
+    return <ProjectCard {...x} key={x.id} reversed={reversed} />;
+  });
 
   return (
-    <div className="w-full flex flex-col font-poppins max-h-max">
-      <div
-        className="heading text-darkslateblue text-[32px] font-semibold max-w-fit cursor-default ml-8 md:ml-2"
-        id="projects"
-      >
+    <section className={`w-full flex flex-col items-center ${kanit.className}`} id="projects">
+      <h1 className="m-0 text-[#0955A3] font-semibold text-[30px] w-[97%] md:text-[30px] md:mb-2 text-center">
         Projects
+      </h1>
+      <h1 className="m-0 text-center text-[#0955A3] font-semibold text-[55px] md:text-[40px] mb-5">
+        Curious What I've <br /> Done?
+      </h1>
+      <div className="w-3/5 flex flex-col gap-7 items-center md:w-5/6">
+        {projectElements}
       </div>
-      <p className="text-dimgray text-lg max-w-fit font-medium my-2 ml-8 md:ml-2">
-        I've created a variety of projects over the course of my web development
-        career by utilising a wide range of Skills, Tools, and Technologies.
-      </p>
-      <div className="wrapper w-full flex flex-col items-center">
-        <motion.div className="conatiner w-2/3 md:w-5/6" variants={variants} initial='hidden' whileInView='visible'>
-          <ul className="card-list">{projectElements}</ul>
-        </motion.div>
-      </div>
-    </div>
+    </section>
   );
 };
 
