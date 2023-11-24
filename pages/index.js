@@ -1,9 +1,8 @@
 import Header from "../components/header";
 import PersonalDetails from "../components/personal-details";
-import Skills from "../components/skills";
 import ProjectsContainer from "../components/projects-container";
 import ContactMe from "../components/contact-me";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
 const Portfolio = () => {
@@ -29,7 +28,6 @@ const Portfolio = () => {
     >
       <Header />
       <PersonalDetails />
-      <Skills />
       <ProjectsContainer />
       <ContactMe />
       <motion.div

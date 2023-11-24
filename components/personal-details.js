@@ -1,6 +1,9 @@
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Skills from "./skills";
+import { Caveat } from "next/font/google";
+
+const caveat = Caveat({ subsets: ["latin"], weight: ["500", "600"] });
 const PersonalDetails = () => {
   return (
     <div className="font-poppins grid grid-cols-3 gap-1 w-full md:grid-cols-1 text-l">
@@ -70,7 +73,6 @@ const PersonalDetails = () => {
             </RoughNotation>{" "}
             user interfaces.
           </h3>
-          <br />
           <h3 className="text-dimgray font-normal text-lg">
             I am currently looking for a new role as a developer,&nbsp;&nbsp;
             <strong>
@@ -88,6 +90,25 @@ const PersonalDetails = () => {
               </RoughNotation>
             </strong>
           </h3>
+
+          <div className="flex items-center gap-2 max-w-max flex-wrap">
+            <h3 className="text-dimgray font-normal text-lg">Tech I </h3>
+            <svg
+              viewBox="0 0 20 20"
+              height="24"
+              width="24"
+              aria-hidden="true"
+              focusable="false"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-orange-500"
+            >
+              <path d="M17.19 4.155c-1.672-1.534-4.383-1.534-6.055 0L10 5.197 8.864 4.155c-1.672-1.534-4.382-1.534-6.054 0-1.881 1.727-1.881 4.52 0 6.246L10 17l7.19-6.599c1.88-1.726 1.88-4.52 0-6.246z"></path>
+            </svg>
+            <h3 className="text-dimgray font-normal text-lg">:</h3>
+            <Skills />
+          </div>
+
           <div className="my-5 flex gap-6 flex-wrap md:gap-5">
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -127,14 +148,61 @@ const PersonalDetails = () => {
           damping: 17,
         }}
       >
-        <Image
-          preload
+        {/* <Image
           width={476}
           height={512}
-          src="/myphoto@2x.png"
+          src="/myphoto.png"
           alt="My photo"
           className="w-3/4 md:hidden my-5 shadow-2xl rounded-md"
-        />
+        /> */}
+        <svg
+          id="sw-js-blob-svg"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          className="md:hidden"
+        >
+          <defs>
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+              <stop
+                id="stop1"
+                stopColor="rgba(254, 198, 208, 1)"
+                offset="0%"
+              ></stop>
+              <stop
+                id="stop2"
+                stopColor="rgba(231, 206, 255, 1)"
+                offset="100%"
+              ></stop>
+            </linearGradient>
+          </defs>
+          <mask id="mask1" mask-type="alpha">
+            <path
+              fill="url(#sw-gradient)"
+              d="M30.3,-31C37.1,-23.6,38.8,-11.8,38.1,-0.7C37.5,10.4,34.4,20.9,27.6,26.4C20.9,31.9,10.4,32.5,0.8,31.7C-8.8,30.8,-17.5,28.6,-24.7,23C-31.9,17.5,-37.6,8.8,-37.3,0.3C-37.1,-8.2,-30.9,-16.5,-23.7,-23.9C-16.5,-31.4,-8.2,-38,1.8,-39.8C11.8,-41.5,23.6,-38.4,30.3,-31Z"
+              width="100%"
+              height="100%"
+              transform="translate(50 50)"
+              strokeWidth="0"
+            ></path>
+          </mask>
+          <g mask="url(#mask1)">
+            <path
+              fill="url(#sw-gradient)"
+              d="M30.3,-31C37.1,-23.6,38.8,-11.8,38.1,-0.7C37.5,10.4,34.4,20.9,27.6,26.4C20.9,31.9,10.4,32.5,0.8,31.7C-8.8,30.8,-17.5,28.6,-24.7,23C-31.9,17.5,-37.6,8.8,-37.3,0.3C-37.1,-8.2,-30.9,-16.5,-23.7,-23.9C-16.5,-31.4,-8.2,-38,1.8,-39.8C11.8,-41.5,23.6,-38.4,30.3,-31Z"
+              width="100%"
+              height="100%"
+              transform="translate(50 50)"
+              strokeWidth="0"
+            ></path>
+            <image
+              href="https://i.imgur.com/eNvh64N.png"
+              x="3"
+              y="-30"
+              className="w-full"
+            />
+          </g>
+        </svg>
       </motion.div>
     </div>
   );

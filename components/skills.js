@@ -1,122 +1,97 @@
-import { motion } from "framer-motion";
-
-const parentVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: {staggerChildren: 0.05, delay: 0.2} },
-};
-const childVariants = {
-  hidden: { x: -100, opacity: 0 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.4, type: "spring", stiffness: 121, damping: 17 },
-  },
-};
-
 const Skills = () => {
   return (
-    <motion.div className="w-full flex font-poppins flex-col justify-items-start">
-      <h1 className="heading mx-8 text-darkslateblue font-semibold max-w-fit cursor-default">
-        Skills & Tools
-      </h1>
-      <h1 className="text-dimgray text-lg mx-8 max-w-fit font-medium">
-        The Tools and Technologies that i use to bring&nbsp; products to life.
-      </h1>
+    <div className="flex gap-4 md:gap-3 flex-wrap">
+      <div className="flex gap-2">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 59 59"
+          fill="#0955A3"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M29.9545 5.33334C16.629 5.33334 5.78784 16.1745 5.78784 29.5C5.78784 42.8255 16.629 53.6667 29.9545 53.6667C43.28 53.6667 54.1212 42.8255 54.1212 29.5C54.1212 16.1745 43.28 5.33334 29.9545 5.33334ZM29.9545 8.95834C41.2814 8.95834 50.4962 18.1731 50.4962 29.5C50.4962 36.5712 46.9046 42.8159 41.4502 46.5134L24.8097 21.8394C24.3662 21.1784 23.5353 20.89 22.7777 21.1196C22.0164 21.354 21.4962 22.0579 21.4962 22.8542V38.5625C21.4962 39.563 22.3082 40.375 23.3087 40.375C24.3092 40.375 25.1212 39.563 25.1212 38.5625V28.7826L38.2642 48.2693C35.7194 49.3991 32.9125 50.0417 29.9545 50.0417C18.6276 50.0417 9.41284 40.8269 9.41284 29.5C9.41284 18.1731 18.6276 8.95834 29.9545 8.95834ZM36.6003 18.625C35.5998 18.625 34.7878 19.437 34.7878 20.4375V30.6918L38.4128 35.891V20.4375C38.4128 19.437 37.6008 18.625 36.6003 18.625Z" />
+        </svg>
+        Next.js
+      </div>
 
-      <motion.div
-        variants={parentVariants}
-        initial="hidden"
-        animate="visible"
-        className="grid grid-cols-5 grid-rows-2 md:grid-cols-3 w-3/5 md:w-full md:-ml-1 ml-8 justify-items-center"
-      >
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
+      <div className="flex gap-2">
+        <svg
+          viewBox="0 0 24 24"
+          height="24"
+          width="24"
+          aria-hidden="true"
+          focusable="false"
+          fill="#0955A3"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <img src="/icons8html-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal">HTML</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
+          <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.476 23.476 0 0 0-3.107-.534A23.892 23.892 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442a22.73 22.73 0 0 0-3.113.538 15.02 15.02 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87a25.64 25.64 0 0 1-4.412.005 26.64 26.64 0 0 1-1.183-1.86c-.372-.64-.71-1.29-1.018-1.946a25.17 25.17 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25.245 25.245 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933a25.952 25.952 0 0 0-1.345-2.32zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493a23.966 23.966 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23.142 23.142 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39a25.819 25.819 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143a22.005 22.005 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295a1.185 1.185 0 0 1-.553-.132c-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z" />
+        </svg>
+        React
+      </div>
+
+      <div className="flex gap-2">
+        <svg
+          viewBox="0 0 24 24"
+          height="24"
+          width="24"
+          aria-hidden="true"
+          focusable="false"
+          fill="#0955A3"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <img src="/icons8css-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal">CSS</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
+          <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"></path>
+        </svg>
+        Tailwind CSS
+      </div>
+
+      <div className="flex gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          height="24"
+          viewBox="0 0 512 512"
+          width="24"
         >
-          <img src="/icons8javascript-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal">JavaScript</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
-        >
-          <img src="/icons8react-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal">React.JS</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
-        >
-          <img src="/icons8nextjs-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal">Next.JS</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
-        >
-          <img src="/icons8git-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal">Git</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
-        >
-          <img src="/icons8github-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal">Github</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
-        >
-          <img
-            src="/icons8visualstudio-1.svg"
-            alt=""
-            className="w-20 md:w-14"
+          <rect fill="#3178c6" height="512" rx="50" width="512" />
+          <rect fill="#3178c6" height="512" rx="50" width="512" />
+          <path
+            clipRule="evenodd"
+            d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z"
+            fill="#fff"
+            fillRule="evenodd"
           />
-          <p className="font-poppins text-lg font-normal">VS Code</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
+        </svg>
+        TypeScript
+      </div>
+
+      <div className="flex gap-2">
+        <svg
+          viewBox="0 0 24 24"
+          height="25"
+          width="25"
+          aria-hidden="true"
+          focusable="false"
+          fill="#0955A3"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <img src="/icons8sass-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal">SASS</p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col justify-center items-center max-w-fit"
-          whileHover={{ scale: 1.1 }}
-          variants={childVariants}
+          <path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zM9.615 15.998c.175.645.156 1.248-.024 1.792l-.065.18c-.024.061-.052.12-.078.176-.14.29-.326.56-.555.81-.698.759-1.672 1.047-2.09.805-.45-.262-.226-1.335.584-2.19.871-.918 2.12-1.509 2.12-1.509v-.003l.108-.061zm9.911-10.861c-.542-2.133-4.077-2.834-7.422-1.645-1.989.707-4.144 1.818-5.693 3.267C4.568 8.48 4.275 9.98 4.396 10.607c.427 2.211 3.457 3.657 4.703 4.73v.006c-.367.18-3.056 1.529-3.686 2.925-.675 1.47.105 2.521.615 2.655 1.575.436 3.195-.36 4.065-1.649.84-1.261.766-2.881.404-3.676.496-.135 1.08-.195 1.83-.104 2.101.24 2.521 1.56 2.43 2.1-.09.539-.523.854-.674.944-.15.091-.195.12-.181.181.015.09.091.09.21.075.165-.03 1.096-.45 1.141-1.471.045-1.29-1.186-2.729-3.375-2.7-.9.016-1.471.091-1.875.256a.362.362 0 0 0-.105-.105c-1.35-1.455-3.855-2.475-3.75-4.41.03-.705.285-2.564 4.8-4.814 3.705-1.846 6.661-1.335 7.171-.21.733 1.604-1.576 4.59-5.431 5.024-1.47.165-2.235-.404-2.431-.615-.209-.225-.239-.24-.314-.194-.12.06-.045.255 0 .375.12.3.585.825 1.396 1.095.704.225 2.43.359 4.5-.45 2.324-.899 4.139-3.405 3.614-5.505l.073.067z"></path>
+        </svg>
+        SASS
+      </div>
+
+      <div className="flex gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#0955A3"
+          width="25"
+          height="25"
+          viewBox="0 0 512 512"
         >
-          <img src="/icons8tailwindcss-1.svg" alt="" className="w-20 md:w-14" />
-          <p className="font-poppins text-lg font-normal text-center">
-            Tailwind <br /> CSS
-          </p>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+          <path fillRule="evenodd" d="M256,48,496,464H16Z" />
+        </svg>
+        Vercel
+      </div>
+    </div>
   );
 };
 
