@@ -21,10 +21,10 @@ const Portfolio = () => {
   }, []);
   return (
     <motion.div
-      className="relative bg-white w-full flex flex-col items-center justify-start gap-[12px]"
+      className="relative bg-[#f2fbff] w-full flex flex-col items-center justify-start gap-[12px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
     >
       <Header />
       <PersonalDetails />
