@@ -20,7 +20,7 @@
   },
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next export -o build/",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   }
