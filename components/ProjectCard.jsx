@@ -6,7 +6,7 @@ export default function ProjectCard(props) {
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="flex flex-row md:flex-col gap-12 md:gap-5 mx-28 md:mx-5 mb-10 bg-cyan-00 overflow-hidden font-poppins"
     >
