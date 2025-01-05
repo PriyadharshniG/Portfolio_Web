@@ -67,6 +67,7 @@ function MyApp({ Component, pageProps }) {
           name="twitter:image"
           content="https://vikaschauhan.vercel.app/og-image.png"
         />
+        <meta name="google-site-verification" content="4_s8FW5N-hZvaaSYMNR6a4KtE2EwjGXq3gRBa8NVxew" />
 
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" href="/favicon.png" />
