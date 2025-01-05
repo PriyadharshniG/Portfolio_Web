@@ -27,7 +27,9 @@ const Portfolio = () => {
       transition={{ duration: 1 }}
     >
       <Header />
-      <PersonalDetails />
+      <main>
+        <PersonalDetails />
+      </main>
       <ProjectsContainer />
       <ContactMe />
       <motion.div
