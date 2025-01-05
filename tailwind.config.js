@@ -14,9 +14,6 @@ module.exports = {
         black: "#000",
         gray: "#121212",
       },
-      fontFamily: {
-        poppins: "Poppins",
-      },
       borderRadius: {
         "8xs": "5px",
         mini: "15px",

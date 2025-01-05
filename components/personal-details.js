@@ -1,12 +1,12 @@
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { motion } from "framer-motion";
 import Skills from "./skills";
-import { Caveat } from "next/font/google";
+import { Poppins } from "next/font/google";
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500"] });
 
-const caveat = Caveat({ subsets: ["latin"], weight: ["500", "600"] });
 const PersonalDetails = () => {
   return (
-    <div className="font-poppins grid grid-cols-3 gap-1 w-full md:grid-cols-1 text-l">
+    <div className={`${poppins.className} grid grid-cols-3 gap-1 w-full md:grid-cols-1 text-l`}>
       <RoughNotationGroup show={true}>
         <div className="ml-48 col-span-2 md:mx-8">
           <h1 className="text-2xl leading-8 md:leading-10">
@@ -114,7 +114,7 @@ const PersonalDetails = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               type="button"
-              className="py-[11px] px-[37px] font-poppins text-lg bg-darkslateblue text-white rounded-md cursor-pointer md:px-[10px]"
+              className={`py-[11px] px-[37px] ${poppins.className} text-lg bg-darkslateblue text-white rounded-md cursor-pointer md:px-[10px]`}
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/vikas-chauhan-232182136/",
@@ -128,7 +128,7 @@ const PersonalDetails = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               type="button"
-              className=" bg-white py-[9px] px-[40px] font-poppins text-lg border-darkslateblue border-2 rounded-md cursor-pointer md:px-[10px]"
+              className={`bg-white py-[9px] px-[40px] ${poppins.className} text-lg border-darkslateblue border-2 rounded-md cursor-pointer md:px-[10px]`}
               onClick={() =>
                 window.open("https://github.com/A-4-Atom", "_blank")
               }

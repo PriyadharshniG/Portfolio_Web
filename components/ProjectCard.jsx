@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Poppins } from "next/font/google";
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500"] });
 
 export default function ProjectCard(props) {
   return (
@@ -8,7 +10,7 @@ export default function ProjectCard(props) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="flex flex-row md:flex-col gap-12 md:gap-5 mx-28 md:mx-5 mb-10 bg-cyan-00 overflow-hidden font-poppins"
+      className={`flex flex-row md:flex-col gap-12 md:gap-5 mx-28 md:mx-5 mb-10 bg-cyan-00 overflow-hidden ${poppins.className}`}
     >
       <div className="w-full flex items-center justify-center">
         <Image

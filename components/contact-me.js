@@ -1,9 +1,11 @@
-import { motion } from "framer-motion";
+import { Caveat, Poppins } from "next/font/google";
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500"] });
+
 const ContactMe = () => {
   return (
     <footer
       id="contact-me"
-      className={`w-full bg-gradient-to-r from-[#d0eaff] to-[#e3f8ff] font-poppins font-light`}
+      className={`w-full bg-gradient-to-r from-[#d0eaff] to-[#e3f8ff] ${poppins.className} font-light`}
     >
       <div className="mx-48 md:mx-5 mt-10">
         <h2 className="text-[30px] my-2 font-medium">Like What you See??</h2>

@@ -1,8 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Caveat } from "next/font/google";
+import { Caveat, Poppins } from "next/font/google";
 
 const caveat = Caveat({ subsets: ["latin"], weight: ["500"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500"] });
 
 const navBarItems = [
   {
@@ -38,11 +39,11 @@ const Header = () => {
         }}
       >
         <h1
-          className={`heading text-[35px] font-poppins text-darkslateblue font-medium mx-28 md:mx-5 cursor-default ${caveat.className}`}
+          className={`heading text-[35px] text-darkslateblue font-medium mx-28 md:mx-5 cursor-default ${caveat.className}`}
         >
           {" < Vikas />"}
         </h1>
-        <div className="flex justify-center items-center gap-7 mx-28 font-poppins text-darkslateblue font-normal md:hidden">
+        <div className={`flex justify-center items-center gap-7 mx-28 ${poppins.className} text-darkslateblue font-normal md:hidden`}>
           {navBarItems.map((item) => (
             <a href={`#${item.id}`} className="nav" key={item.id}>
               {item.name}
@@ -99,7 +100,7 @@ const Header = () => {
             <div className="flex justify-end flex-col items-end">
               {navBarItems.map((item) => (
                 <motion.h1
-                  className="max-w-fit mr-8 font-poppins font-normal text-darkslateblue"
+                  className={`max-w-fit mr-8 ${poppins.className} font-normal text-darkslateblue`}
                   variants={headingVariants}
                   initial="initial"
                   animate="animate"
