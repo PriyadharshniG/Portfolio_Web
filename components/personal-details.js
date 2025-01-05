@@ -8,7 +8,7 @@ const PersonalDetails = () => {
   return (
     <div className="font-poppins grid grid-cols-3 gap-1 w-full md:grid-cols-1 text-l">
       <RoughNotationGroup show={true}>
-        <div className="ml-40 col-span-2 md:mx-8">
+        <div className="ml-48 col-span-2 md:mx-8">
           <h1 className="text-2xl leading-8 md:leading-10">
             Hi! I’m Vikas, a{" "}
             <RoughNotation
@@ -155,7 +155,7 @@ const PersonalDetails = () => {
           alt="My photo"
           className="w-3/4 md:hidden my-5 shadow-2xl rounded-md"
         /> */}
-        <svg
+        {/* <svg
           id="sw-js-blob-svg"
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +202,7 @@ const PersonalDetails = () => {
               className="w-full"
             />
           </g>
-        </svg>
+        </svg> */}
       </motion.div>
     </div>
   );
