@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const fontFamily = require("tailwindcss/defaultTheme").fontFamily;
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -17,6 +18,11 @@ module.exports = {
       borderRadius: {
         "8xs": "5px",
         mini: "15px",
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", ...fontFamily.sans],
+        caveat: ["var(--font-caveat)", "cursive"],
+        kanit: ["var(--font-kanit)", ...fontFamily.sans],
       },
     },
     fontSize: {
