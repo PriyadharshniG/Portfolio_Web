@@ -37,7 +37,7 @@ const Header = () => {
         <h1
           className={`heading text-[35px] text-darkslateblue font-medium mx-28 md:mx-5 cursor-default font-caveat`}
         >
-          {" < Vikas />"}
+          {" < Dheena S />"}
         </h1>
         <div className={`flex justify-center items-center gap-7 mx-28 font-poppins text-darkslateblue font-normal md:hidden`}>
           {navBarItems.map((item) => (
@@ -123,7 +123,7 @@ const Header = () => {
               >
                 <motion.svg
                   onClick={() =>
-                    window.open("https://www.github.com/A-4-Atom", "_blank")
+                    window.open("https://github.com/Dheenack", "_blank")
                   }
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
@@ -139,7 +139,7 @@ const Header = () => {
                 <motion.svg
                   onClick={() =>
                     window.open(
-                      "https://www.linkedin.com/in/vikas-chauhan-232182136/",
+                      "https://www.linkedin.com/in/dheena-krishna-s/",
                       "_blank"
                     )
                   }
@@ -155,7 +155,7 @@ const Header = () => {
                 </motion.svg>
                 <motion.svg
                   onClick={() =>
-                    window.open("https://www.instagram.com/a.4.atom/", "_blank")
+                    window.open("https://www.instagram.com/views_of_dk/", "_blank")
                   }
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 32 32"

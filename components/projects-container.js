@@ -1,7 +1,6 @@
 import projectData from "../lib/projectData.js";
 import ProjectCard from "./ProjectCard.jsx";
 
-
 const ProjectsContainer = () => {
   return (
     <section
@@ -12,8 +11,7 @@ const ProjectsContainer = () => {
         Projects
       </h1>
 
-      {projectData.map((item) => <ProjectCard {...item} key={item.id}/>)}
-
+      {projectData.map((item) => <ProjectCard {...item} key={item.id} />)}
     </section>
   );
 };

@@ -8,22 +8,20 @@ export default function ProjectCard(props) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className={`flex flex-row md:flex-col gap-12 md:gap-5 mx-28 md:mx-5 mb-10 bg-cyan-00 overflow-hidden font-poppins`}
+      className="flex flex-row md:flex-col gap-12 md:gap-5 mx-28 md:mx-5 mb-10 bg-cyan-00 overflow-hidden font-poppins"
     >
       <div className="w-full flex items-center justify-center">
         <Image
-          src={props.imageURL}
-          alt="Project Image"
-          width={760}
-          height={494}
+          src={props.imageURL}  // External image URL
+          alt={props.name}  // Descriptive alt text for accessibility
+          width={760}  // Specify the image width
+          height={494}  // Specify the image height
           className="rounded-2xl object-contain max-w-full max-h-[350px] h-auto w-auto"
-          priority={props.id ==1 ? true : false}
+          priority={props.id === 1}  // Prioritize image for the first project
         />
       </div>
       <div className="flex flex-col w-full">
-        <h2 className="max-w-max text-darkslateblue text-[2rem]">
-          {props.name}
-        </h2>
+        <h2 className="max-w-max text-darkslateblue text-[2rem]">{props.name}</h2>
         <div className="flex gap-2 flex-wrap text-xl">
           {props.skills.join(" - ")}
         </div>
